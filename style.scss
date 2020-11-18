@@ -1,0 +1,253 @@
+$color0 :#55442f;
+$color1 :#af9476;
+$color2 :#e8e1d6;
+$color3 : #201a11;
+
+@mixin navbar-list {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;           
+    height: 200px;
+    margin: auto;
+    background-image: url(/img/Untitled-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.contain{
+    background-color: $color2 ;
+
+    .home-wrapper{
+
+        .navbar{
+            @include navbar-list ;
+
+            .logo{
+                width: 50vw;
+            }
+    
+            .left-items{
+                
+                .icon{
+                    color: #866c4f;
+                }
+    
+                input[type="search"]::-webkit-search-cancel-button {
+                    -webkit-appearance: none;
+                }
+                
+                .search{
+                    height: 5vh;
+                    margin-top: 65px;
+                    margin-left: 10px;
+                    border-style: none;
+                    background-color: transparent;
+                    font-size: 18px;
+                    outline: none;
+                }
+            } 
+    
+            .right-items{
+    
+                .icon{
+                color: #866c4f;
+                }
+                .options{
+                    margin-top: 65px;
+                    width: 9vw;
+                    display: flex;
+                    justify-content: space-around;
+                }            
+            }       
+        }
+        .main-home{
+            display: flex;
+            justify-content: space-around;
+            .main-photo{
+                background-position: center;
+                margin: auto;
+                width: 50vw;
+                height: 50vh;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .photo-1{
+                background-image: url(/img/7.jpg);
+            }
+            .photo-2{
+                background-image: url(/img/10.jpg);
+            }
+            .photo-3{
+                background-image: url(/img/6.jpg);
+            }
+        }
+    }
+    
+    .login-wrapper{        
+            position: relative;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            img{
+                padding-top: 6%;
+                opacity: 0.3;
+                width: 60%;
+            }
+            
+        .navbar{
+            position: absolute;
+            left: 5vw;
+            bottom: 70%;
+            @include navbar-list ;
+
+            .logo{
+                width: 50vw;
+            }
+
+            .left-items{
+                
+                .icon{
+                    color: #866c4f;
+                }
+
+                input[type="search"]::-webkit-search-cancel-button {
+                    -webkit-appearance: none;
+                }
+                
+                .search{
+                    
+                    height: 5vh;
+                    margin-top: 65px;
+                    margin-left: 10px;
+                    border-style: none;
+                    background-color: transparent;
+                    font-size: 18px;
+                    outline: none;
+                }
+            } 
+
+            .right-items{
+
+                .icon{
+                color: #866c4f;
+                }
+                .options{
+                    
+                    margin-top: 65px;
+                    width: 9vw;
+                    display: flex;
+                    justify-content: space-around;
+                }            
+            }       
+        }
+        .main-login{
+            position: absolute;
+            bottom: 15%;
+            left: 35vw;
+            .login-panel{
+                display: flex;
+                flex-direction: column;
+                padding-top: 90px;
+                margin: auto;
+                width: 30vw;
+                height: 60vh;
+                .login-items{
+                    height: 100%;
+                    .login-title{
+                        color:  #201a11;
+                        width: 8vw;
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                    }
+                    .inputs{
+                        margin-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .email{
+                            margin-bottom: 5px;
+                        }
+                    }
+                    .buttons{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 12px;
+                        .sign{
+                            width: 35%;
+                            display: flex;
+                            justify-content: space-between;
+                            .sign-in{
+                                padding: 10px;
+                                background-color: $color1;
+                                border: 1px solid $color1;
+                                color: #0f0c08;
+                                transition-duration: 0.5s;
+                                &:hover{
+                                   background-color: transparent;
+                                   
+
+                                }
+    
+                            }
+                            .sign-up{
+                                padding: 10px;
+                                border: 1px solid $color1;
+                                color: #0f0c08;
+                                transition-duration: 0.5s;
+
+                                &:hover{
+                                    background-color: $color1;
+                                }
+                            }
+                        }
+                        .forget-password{
+                            color: $color1;
+                            &:hover{
+                                color: $color0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-wrap{
+        margin: auto;
+        margin-top: 30vh;
+        width: 95vw;
+        height: 40vh;
+        border-top: 1px solid $color3;
+        .footer-menu{
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            padding-top: 8vh;
+            width: 80%;
+            height: 20vh;
+        }
+        .social{
+            display: flex;
+            width: 95vw;
+            height: 20vh;
+            .social-media{
+                width: 50%;
+                height: 20vh;
+            }
+            .name{
+                padding-top: 10vh;
+                padding-left: 15vw;
+                width: 50%;
+                height: 20vh;
+            }
+        }
+    }
+}
